@@ -1,0 +1,17 @@
+/bots/
+/config/
+
+/java/
+hs_err_pid*.log
+
+/data/*
+!/data/org.itxtech.mirainative/
+/data/org.itxtech.mirainative/*
+!/data/org.itxtech.mirainative/plugins/
+
+Dice*/
+log/
+
+/logs/
+
+/plugin-libraries/

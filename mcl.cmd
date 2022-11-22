@@ -1,5 +1,10 @@
 @echo off
-cd %~dp0
-set JAVA_BINARY=jre\bin\java
-set /p mem=<MaxMemory.txt
-%JAVA_BINARY% -Xmx%mem% -jar mcl.jar %*
+setlocal
+set JAVA_BINARY="%cd%\java\bin\java.exe"
+%JAVA_BINARY% -jar mcl.jar %*
+
+set EL=%ERRORLEVEL%
+if %EL% NEQ 0 (
+    echo Process exited with %EL%
+    pause
+)
